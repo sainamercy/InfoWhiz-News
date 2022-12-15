@@ -1,4 +1,4 @@
-function authentication() {
+export function authentication() {
   // getting elements from the DOM
   const authSection = document.querySelector("#authentication");
   const signUpForm = document.querySelector("#signUp");
@@ -56,4 +56,4 @@ function authentication() {
   // executing login function on submit of the form
   loginForm.addEventListener("submit", login);
 }
-authentication();
+

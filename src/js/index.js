@@ -1,3 +1,2 @@
-// import authentication from "./auth";
-
-// authentication()
+import { authentication } from "./auth";
+ authentication()
