@@ -1,0 +1,1 @@
+const FETCH_URL = `https://inshorts.deta.dev/news?category={category_name}`
