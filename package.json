@@ -1,0 +1,27 @@
+{
+  "name": "infowhiz-news",
+  "version": "1.0.0",
+  "description": "News updates application",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sainamercy/InfoWhiz-News.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "news",
+    "API",
+    "fetch"
+  ],
+  "author": "Mercy Saina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sainamercy/InfoWhiz-News/issues"
+  },
+  "homepage": "https://github.com/sainamercy/InfoWhiz-News#readme"
+}
