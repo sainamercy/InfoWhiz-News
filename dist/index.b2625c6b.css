@@ -8,9 +8,15 @@
 #authentication {
   height: 100vh;
   width: 100vw;
-  background-color: #d8edf4;
+  background-color: #f3f7f9;
+  flex-direction: column;
   align-items: center;
   display: flex;
+}
+
+.header {
+  margin-top: 100px;
+  font-size: 2em;
 }
 
 form {
@@ -54,6 +60,35 @@ form button {
   border-radius: 5px;
   padding: 10px;
   font-size: 1.2em;
+}
+
+#main {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+nav {
+  color: #fff;
+  width: 100%;
+  background-color: #00f;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+#heading {
+  font-size: 2em;
+}
+
+#heading span {
+  color: red;
+  font-style: italic;
+}
+
+#slogan {
+  font-size: .8em;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=index.b2625c6b.css.map */
