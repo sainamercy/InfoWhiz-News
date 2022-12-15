@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Infowhiz News</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Authentication section -->
+    <section id="authentication">
+        <!-- sign up form -->
+      <form action="submit" id="signUp">
+        <label>
+          <p>Enter email</p>
+          <input
+            type="email"
+            id="signupEmail"
+            placeholder="e.g: sainamercy@gmail.com"
+          />
+        </label>
+        <label>
+          <p>Enter user name</p>
+          <input
+            type="text"
+            id="signupUserName"
+            placeholder="e.g: sainamercy"
+          />
+        </label>
+        <label>
+          <p>Enter password</p>
+          <input type="password" id="signUpPass" placeholder="password"/>
+        </label>
+        <button type="submit" id="signUpBtn">sign up</button>
+      </form>
+      <!-- login form -->
+      <form action="submit" id="login">
+        <label>
+            <p>Enter email</p>
+            <input type="email" id="loginEmail" placeholder="e.g: sainamercy@gmail.com"/>
+        </label>
+        <label>
+            <p>Enter password</p>
+            <input type="password" id="loginPass" placeholder="password"/>
+        </label>
+        <button type="submit" id="loginBtn">log in</button>
+      </form>
+    </section>
 
     <script src="./src/js/index.js"></script>
-</body>
+  </body>
 </html>
