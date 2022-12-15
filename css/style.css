@@ -20,7 +20,7 @@ form{
     align-items: center;
     border-radius: 10px;
     height: 40%;
-    width: 20%;
+    width: 400px;
     margin: auto;
     background-color: rgb(253, 254, 253);
     font-size: 1.2em;
@@ -48,7 +48,7 @@ form button{
     border: none;
     padding: 10px;
     border-radius: 5px;
-    background-color: rgb(44, 144, 225);
+    background-color: blue;
     color: white;
 
 }
