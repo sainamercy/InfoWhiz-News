@@ -5,73 +5,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#authentication {
-  height: 100vh;
-  width: 100vw;
-  background-color: #f3f7f9;
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-}
-
-.header {
-  margin-top: 100px;
-  font-size: 2em;
-}
-
-form {
-  text-align: center;
-  height: 40%;
-  width: 400px;
-  background-color: #fdfefd;
-  border-radius: 10px;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: auto;
-  font-size: 1.2em;
-  display: flex;
-  box-shadow: 5px 5px 20px 5px #949393;
-}
-
-form input {
-  width: 100%;
-  border: 1px solid #bcbbbb;
-  border-radius: 5px;
-  padding: 16px;
-}
-
-form label {
-  width: 90%;
-  text-align: left;
-  color: #2f2e2e;
-}
-
-form p {
-  margin-bottom: 5px;
-}
-
-form button {
-  width: 50%;
-  color: #2f2e2e;
-  color: #fff;
-  background-color: #00f;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 1.2em;
-}
-
-#main {
-  height: 100vh;
-  flex-direction: column;
-  display: flex;
-}
-
 nav {
   color: #fff;
   width: 100%;
-  background-color: #00f;
+  background-color: #000;
   padding: 20px;
   position: sticky;
   top: 0;
@@ -89,6 +26,72 @@ nav {
 #slogan {
   font-size: .8em;
   font-style: italic;
+}
+
+#authentication {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("bg.c485c0e8.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.opacity {
+  height: 100%;
+  width: 100%;
+  background-color: #000000cf;
+  flex-direction: column;
+  display: flex;
+  position: absolute;
+}
+
+form {
+  text-align: center;
+  height: 40%;
+  width: 400px;
+  background-color: gray;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  font-size: 1.2em;
+  display: flex;
+  box-shadow: 5px 5px 20px 5px #000;
+}
+
+form input {
+  width: 100%;
+  border: 1px solid #bcbbbb;
+  border-radius: 5px;
+  padding: 16px;
+}
+
+form label {
+  width: 90%;
+  text-align: left;
+  color: #161515;
+}
+
+form p {
+  margin-bottom: 5px;
+}
+
+form button {
+  width: 50%;
+  color: #2f2e2e;
+  color: #fff;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#main {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.b2625c6b.css.map */

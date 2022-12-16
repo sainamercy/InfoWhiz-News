@@ -4,72 +4,11 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* start of authentication section */
-#authentication {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(243, 247, 249);
-}
-.header{
-    margin-top: 100px;
-    font-size: 2em;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  text-align: center;
-  align-items: center;
-  border-radius: 10px;
-  height: 40%;
-  width: 400px;
-  margin: auto;
-  background-color: rgb(253, 254, 253);
-  font-size: 1.2em;
-  box-shadow: 5px 5px 20px 5px rgb(148, 147, 147);
-}
-form input {
-  padding: 16px;
-  border-radius: 5px;
-  width: 100%;
-  border: none;
-  border: 1px solid rgb(188, 187, 187);
-}
-form label {
-  width: 90%;
-  text-align: left;
-  color: rgb(47, 46, 46);
-}
-form p {
-  margin-bottom: 5px;
-}
-form button {
-  width: 50%;
-  color: rgb(47, 46, 46);
-  font-size: 1.2em;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: blue;
-  color: white;
-}
-/* end of authentication section */
-
-/* main section */
-#main {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+/* nav section */
 nav {
   position: sticky;
   top: 0;
-  background-color: blue;
+  background-color: black;
   color: white;
   padding: 20px;
   width: 100%;
@@ -85,3 +24,69 @@ nav {
   font-style: italic;
   font-size: 0.8em;
 }
+
+/* start of authentication section */
+#authentication {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../src/images/bg.jpg);
+  background-size: cover;
+}
+
+.opacity{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.811);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 40%;
+  width: 400px;
+  margin: auto;
+  font-size: 1.2em;
+  box-shadow: 5px 5px 20px 5px black;
+  background-color: grey;
+}
+form input {
+  padding: 16px;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  border: 1px solid rgb(188, 187, 187);
+}
+form label {
+  width: 90%;
+  text-align: left;
+  color: rgb(22, 21, 21);
+}
+form p {
+  margin-bottom: 5px;
+}
+form button {
+  width: 50%;
+  color: rgb(47, 46, 46);
+  font-size: 1.2em;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+}
+/* end of authentication section */
+
+/* main section */
+#main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+

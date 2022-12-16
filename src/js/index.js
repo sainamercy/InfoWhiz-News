@@ -1,4 +1,6 @@
 import { authentication } from "./auth";
- authentication()
+import { data } from "./renderNews";
 
+authentication()
+data()
  

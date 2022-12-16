@@ -533,9 +533,11 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"ebWYT":[function(require,module,exports) {
 var _auth = require("./auth");
+var _renderNews = require("./renderNews");
 (0, _auth.authentication)();
+(0, _renderNews.data)();
 
-},{"./auth":"gjHiY"}],"gjHiY":[function(require,module,exports) {
+},{"./auth":"gjHiY","./renderNews":"c0dpJ"}],"gjHiY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "authentication", ()=>authentication);
@@ -621,6 +623,36 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire73e9")
+},{}],"c0dpJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "data", ()=>data);
+var _confing = require("./confing");
+async function data() {
+    const response = await fetch((0, _confing.FETCH_URL));
+    const data = await response.json();
+    console.log(data);
+}
+
+},{"./confing":"ex4bO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ex4bO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FETCH_URL", ()=>FETCH_URL);
+const FETCH_URL = `https://inshorts.deta.dev/news?category=business`; // export const newsCategories = [
+ //   all,
+ //   business,
+ //   sports,
+ //   world,
+ //   politics,
+ //   technology,
+ //   startup,
+ //   entertainment,
+ //   miscellaneous,
+ //   hatke,
+ //   science,
+ //   automobile,
+ // ];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire73e9")
 
 //# sourceMappingURL=index.739bf03c.js.map
