@@ -5,70 +5,121 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Infowhiz News</title>
+    <script
+    src="https://kit.fontawesome.com/dbeb62ff9b.js"
+    crossorigin="anonymous"
+  ></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <nav>
-      <h1 id="heading">Info<span>Whiz</span> News</h1>
-      <p id="slogan">Read the world today</p></div>
-    </nav>
     <!-- Authentication section -->
     <section id="authentication">
       <div class="opacity">
-      <!-- sign up form -->
-      <form action="submit" id="signUp">
-        <h3>Sign up</h3>
-        <label>
-          <p>Enter email</p>
-          <input
-            type="email"
-            id="signupEmail"
-            placeholder="e.g: sainamercy@gmail.com"
-          />
-        </label>
-        <label>
-          <p>Enter user name</p>
-          <input
-            type="text"
-            id="signupUserName"
-            placeholder="e.g: sainamercy"
-          />
-        </label>
-        <label>
-          <p>Enter password</p>
-          <input type="password" id="signUpPass" placeholder="password"/>
-        </label>
-        <button type="submit" id="signUpBtn">sign up</button>
-      </form>
-      <!-- login form -->
-      <form action="submit" id="login">
-        <h3>Log in</h3>
-        <label>
-          <p>Enter email</p>
-          <input
-            type="email"
-            id="loginEmail"
-            placeholder="e.g: sainamercy@gmail.com"
-          />
-        </label>
-        <label>
-          <p>Enter password</p>
-          <input type="password" id="loginPass" placeholder="password"/>
-        </label>
-        <button type="submit" id="loginBtn">log in</button>
-      </form>
-    </div>
+        <nav class="center">
+          <h1 id="heading">Welcome to Info<span>Whiz</span> News</h1>
+        </nav>
+        <!-- sign up form -->
+        <!-- <div class="welcomeMsg">
+          <p>Welcome to InfoWhizz news</p>
+          <p>Sign Up to get started</p>
+        </div> -->
+       <div class="form">
+        <form action="submit" id="signUp">
+          <h3>Sign up to get started!</h3>
+          <label>
+            <p>Enter email</p>
+            <input
+              type="email"
+              id="signupEmail"
+              placeholder="e.g: sainamercy@gmail.com"
+            />
+          </label>
+          <label>
+            <p>Enter user name</p>
+            <input
+              type="text"
+              id="signupUserName"
+              placeholder="e.g: sainamercy"
+            />
+          </label>
+          <label>
+            <p>Enter password</p>
+            <input type="password" id="signUpPass" placeholder="password" />
+          </label>
+          <button type="submit" id="signUpBtn">sign up</button>
+        </form>
+        <!-- login form -->
+        <form action="submit" id="login">
+          <h3>Log in</h3>
+          <label>
+            <p>Enter email</p>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="e.g: sainamercy@gmail.com"
+            />
+          </label>
+          <label>
+            <p>Enter password</p>
+            <input type="password" id="loginPass" placeholder="password" />
+          </label>
+          <button type="submit" id="loginBtn">log in</button>
+        </form>
+       </div>
+      </div>
     </section>
-<!-- main section -->
+    <!-- main section -->
     <section id="main">
+    <nav>
+      <div><h1 id="heading">Info<span>Whiz</span> News</h1>
+        <p id="slogan">Read the world today</p></div>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
       <div id="content">
         <div id="newsBriefs">
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias consequatur eos repudiandae omnis, laboriosam excepturi deleniti repellendus quae suscipit mollitia perferendis rem animi aspernatur enim ad atque? Ullam, iusto necessitatibus.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+            consequatur eos repudiandae omnis, laboriosam excepturi deleniti
+            repellendus quae suscipit mollitia perferendis rem animi aspernatur
+            enim ad atque? Ullam, iusto necessitatibus.
+          </p>
         </div>
         <div id="newsDetails"></div>
       </div>
     </section>
-
+    <section id="contact">
+      <form action="submit" id="feedback">
+        <h3>Tell us about your experience with InfoWhizz</h3>
+        <label>
+          <p>Enter email</p>
+          <input
+            type="email"
+            id="fbEmail"
+            placeholder="e.g: sainamercy@gmail.com"
+          />
+        </label>
+        <label>
+          <p>Enter Full Name</p>
+          <input
+            type="text"
+            id="name"
+            placeholder="e.g: Mercy Saina"
+          />
+        </label>
+        <label>
+          <p>Write your feedback here</p>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </label>
+        <button type="submit" id="feedbackBtn">Submit</button>
+      </form>
+      <div class="line"></div>
+      <div id="contactInfo">
+        <h3>Find us:</h3>
+      </div>
+      <div class="toTop"><a href="#main"><i class="fa-solid fa-arrow-up"></i>top</a></div>
+    </section>
 
     <script src="./src/js/index.js" type="module"></script>
     <!-- <i class="fa fa-copyright" aria-hidden="true"></i> -->

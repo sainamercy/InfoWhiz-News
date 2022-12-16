@@ -1,20 +1,30 @@
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
   color: #fff;
   width: 100%;
   background-color: #000;
+  justify-content: space-evenly;
+  align-items: center;
   padding: 20px;
-  position: sticky;
-  top: 0;
+  display: flex;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
 #heading {
+  text-align: center;
   font-size: 2em;
 }
 
@@ -33,38 +43,49 @@ nav {
   width: 100vw;
   background-image: url("bg.c485c0e8.jpg");
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 
 .opacity {
   height: 100%;
   width: 100%;
+  text-align: center;
   background-color: #000000cf;
   flex-direction: column;
+  align-items: center;
   display: flex;
   position: absolute;
 }
 
+.form {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 form {
   text-align: center;
-  height: 40%;
-  width: 400px;
+  height: 50%;
+  width: 600px;
   background-color: gray;
   border-radius: 10px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin: auto;
   font-size: 1.2em;
   display: flex;
   box-shadow: 5px 5px 20px 5px #000;
 }
 
-form input {
+form input, textarea {
   width: 100%;
   border: 1px solid #bcbbbb;
   border-radius: 5px;
-  padding: 16px;
+  padding: 20px;
 }
 
 form label {
@@ -91,6 +112,64 @@ form button {
 #main {
   height: 100vh;
   flex-direction: column;
+  display: flex;
+}
+
+#contact {
+  height: 100vh;
+  width: 100%;
+  background-color: #262424;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  position: absolute;
+}
+
+#contact form {
+  height: 60%;
+}
+
+#contactInfo {
+  height: 60%;
+  color: #2f2e2e;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contactInfo h3 {
+  color: #000;
+  font-size: 1.5em;
+}
+
+.line {
+  height: 40%;
+  border: 1px solid #626060;
+  box-shadow: 1px 1px 30px 2px #1e0a0a;
+}
+
+.toTop {
+  height: 80px;
+  width: 80px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.toTop a {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  text-decoration: none;
   display: flex;
 }
 

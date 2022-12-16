@@ -3,18 +3,29 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 /* nav section */
 nav {
-  position: sticky;
-  top: 0;
   background-color: black;
   color: white;
   padding: 20px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
 }
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+
 #heading {
   font-size: 2em;
+  text-align: center;
 }
 #heading span {
   color: red;
@@ -32,6 +43,7 @@ nav {
   width: 100vw;
   background-image: url(../src/images/bg.jpg);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .opacity{
@@ -41,6 +53,16 @@ nav {
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.form{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 form {
   display: flex;
@@ -49,15 +71,15 @@ form {
   text-align: center;
   align-items: center;
   border-radius: 10px;
-  height: 40%;
-  width: 400px;
-  margin: auto;
+  height: 50%;
+  width: 600px;
+  /* margin: auto; */
   font-size: 1.2em;
   box-shadow: 5px 5px 20px 5px black;
   background-color: grey;
 }
-form input {
-  padding: 16px;
+form input, textarea {
+  padding: 20px;
   border-radius: 5px;
   width: 100%;
   border: none;
@@ -89,4 +111,61 @@ form button {
   display: flex;
   flex-direction: column;
 }
+/* contact section */
 
+#contact{
+  height: 100vh;
+  background-color: rgb(38, 36, 36);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+
+}
+
+#contact form{
+  height: 60%;
+
+}
+
+#contactInfo{
+  height: 60%;
+  color: rgb(47, 46, 46);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#contactInfo h3{
+  color: black;
+  font-size: 1.5em;
+}
+.line{
+  border: 1px solid rgb(98, 96, 96);
+  height: 40%;
+  box-shadow: 1px 1px 30px 2px rgb(30, 10, 10);
+
+}
+.toTop{
+  height: 80px;
+  width: 80px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+.toTop a{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
