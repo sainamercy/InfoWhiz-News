@@ -10,7 +10,7 @@
 nav {
   background-color: black;
   color: white;
-  padding: 30px;
+  padding: 20px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@ li{
 }
 
 #heading {
-  font-size: 2em;
+  font-size: 2.5em;
   text-align: center;
 }
 #heading span {
@@ -42,7 +42,7 @@ li{
 }
 #slogan {
   font-style: italic;
-  font-size: 0.8em;
+  color: grey;
 }
 
 /* start of authentication section */
@@ -57,6 +57,7 @@ li{
 
 #authentication nav{
   justify-content: space-evenly;
+  padding: 30px;
 }
 .opacity{
   position: absolute;
@@ -85,7 +86,6 @@ form {
   border-radius: 10px;
   height: 50%;
   width: 600px;
-  /* margin: auto; */
   font-size: 1.2em;
   box-shadow: 5px 5px 20px 5px black;
   background-color: grey;
@@ -137,6 +137,19 @@ form button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.briefsHead{
+  font-size: 2em;
+  background-color: rgb(53, 52, 52);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  margin-top: 5px;
+  border-radius: 10px;
+  color: rgb(200, 196, 196);
+}
+.briefsHead span{
+color: black;
 }
 #newsList{
   display: flex;

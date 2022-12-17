@@ -12,7 +12,7 @@ nav {
   background-color: #000;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 20px;
   display: flex;
 }
 
@@ -35,7 +35,7 @@ li {
 
 #heading {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 #heading span {
@@ -44,7 +44,7 @@ li {
 }
 
 #slogan {
-  font-size: .8em;
+  color: gray;
   font-style: italic;
 }
 
@@ -59,6 +59,7 @@ li {
 
 #authentication nav {
   justify-content: space-evenly;
+  padding: 30px;
 }
 
 .opacity {
@@ -145,6 +146,21 @@ form button {
   align-items: center;
   display: flex;
   overflow-y: scroll;
+}
+
+.briefsHead {
+  width: 100%;
+  text-align: center;
+  color: #c8c4c4;
+  background-color: #353434;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 20px;
+  font-size: 2em;
+}
+
+.briefsHead span {
+  color: #000;
 }
 
 #newsList {
