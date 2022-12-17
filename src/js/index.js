@@ -1,6 +1,6 @@
 import { authentication } from "./auth";
-import { data } from "./renderNews";
+import { renderNews } from "./renderNews";
 
 authentication()
-data()
+renderNews()
  

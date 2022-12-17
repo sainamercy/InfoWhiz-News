@@ -9,6 +9,7 @@ export function authentication() {
   const loginEmail = document.querySelector("#loginEmail");
   const loginPassword = document.querySelector("#loginPass");
   const mainPage = document.querySelector("#main");
+  const navList = document.querySelector("#navList")
   // hide login form and main section
   loginForm.style.display = "none";
   mainPage.style.display = "none";
@@ -47,6 +48,7 @@ export function authentication() {
     if (email === signDetails.email && password === signDetails.password) {
       authSection.style.display = "none";
       mainPage.style.display = "flex";
+      navList.insertAdjacentHTML("beforeend", `<li class="user"><i class="fa-solid fa-user"></i> ${signDetails.userName}</li>`)
     } else {
       alert("please enter correct credentials");
       loginForm.reset();

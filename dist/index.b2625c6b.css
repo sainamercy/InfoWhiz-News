@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
   overflow-x: hidden;
 }
 
@@ -11,16 +14,27 @@ nav {
   color: #fff;
   width: 100%;
   background-color: #000;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
   display: flex;
 }
 
 nav a {
-  color: #fff;
-  font-size: 1.5em;
+  color: azure;
   text-decoration: none;
+}
+
+nav ul {
+  color: azure;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.5em;
+  display: flex;
+}
+
+li {
+  list-style: none;
 }
 
 #heading {
@@ -41,17 +55,21 @@ nav a {
 #authentication {
   height: 100vh;
   width: 100vw;
-  background-image: url("bg.c485c0e8.jpg");
+  background-image: url("bg2.604c4892.jpg");
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+}
+
+#authentication nav {
+  justify-content: space-evenly;
 }
 
 .opacity {
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: #000000cf;
+  background-color: #000000e2;
   flex-direction: column;
   align-items: center;
   display: flex;
@@ -113,6 +131,56 @@ form button {
   height: 100vh;
   flex-direction: column;
   display: flex;
+}
+
+.user {
+  color: red;
+}
+
+#content {
+  height: 100%;
+  width: 100%;
+}
+
+#newsBriefs {
+  height: 100%;
+  width: 30%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  overflow-y: scroll;
+}
+
+#newsList {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#newsList li {
+  height: 400px;
+  width: 95%;
+  border: 1px solid #929191;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-shadow: 5px 5px 10px 3px #a4a3a3;
+}
+
+#newsList li img {
+  height: 60%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#newsList p, h3 {
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+#newsList h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
 }
 
 #contact {

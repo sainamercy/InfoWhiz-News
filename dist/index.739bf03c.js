@@ -535,7 +535,7 @@ function hmrAcceptRun(bundle, id) {
 var _auth = require("./auth");
 var _renderNews = require("./renderNews");
 (0, _auth.authentication)();
-(0, _renderNews.data)();
+(0, _renderNews.renderNews)();
 
 },{"./auth":"gjHiY","./renderNews":"c0dpJ"}],"gjHiY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -552,6 +552,7 @@ function authentication() {
     const loginEmail = document.querySelector("#loginEmail");
     const loginPassword = document.querySelector("#loginPass");
     const mainPage = document.querySelector("#main");
+    const navList = document.querySelector("#navList");
     // hide login form and main section
     loginForm.style.display = "none";
     mainPage.style.display = "none";
@@ -584,6 +585,7 @@ function authentication() {
         if (email === signDetails.email && password === signDetails.password) {
             authSection.style.display = "none";
             mainPage.style.display = "flex";
+            navList.insertAdjacentHTML("beforeend", `<li class="user"><i class="fa-solid fa-user"></i> ${signDetails.userName}</li>`);
         } else {
             alert("please enter correct credentials");
             loginForm.reset();
@@ -626,12 +628,22 @@ exports.export = function(dest, destName, get) {
 },{}],"c0dpJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "data", ()=>data);
+parcelHelpers.export(exports, "renderNews", ()=>renderNews);
 var _confing = require("./confing");
-async function data() {
+async function renderNews() {
+    // getting data from API
     const response = await fetch((0, _confing.FETCH_URL));
     const data = await response.json();
     console.log(data);
+    //   getting elements from DOM
+    const newsListContainer = document.querySelector("#newsList");
+    function getNewsTitles() {
+        data.data.map((news)=>{
+            const markUp = `<li><img src="${news.imageUrl}" alt="news-poster"><h3>${news.title}</h3><p><i>by: ${news.author}</i></p><p>${news.date}</p></li>`;
+            newsListContainer.insertAdjacentHTML("afterbegin", markUp);
+        });
+    }
+    getNewsTitles();
 }
 
 },{"./confing":"ex4bO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ex4bO":[function(require,module,exports) {
