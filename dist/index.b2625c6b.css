@@ -179,6 +179,10 @@ form button {
   box-shadow: 5px 5px 10px 3px #a4a3a3;
 }
 
+#newsList li:hover, #newsList li:focus {
+  transform: scale(1.01);
+}
+
 #newsList li img {
   height: 65%;
   width: 100%;
