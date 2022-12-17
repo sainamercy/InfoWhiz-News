@@ -28,7 +28,7 @@ nav ul{
   gap: 20px;
   color: azure;
 }
-li{
+nav li{
   list-style: none;
   padding: 15px;
   border-radius: 5px;
