@@ -158,7 +158,7 @@ color: black;
   height: 100%;
 }
 #newsList li{
-  height: 350px;
+  height: 400px;
   width: 95%;
   border: 1px solid rgb(146, 145, 145);
   border-radius: 10px;
@@ -166,7 +166,7 @@ color: black;
   box-shadow: 5px 5px 10px 3px rgb(164, 163, 163);
 }
 #newsList li img{
-  height: 60%;
+  height: 65%;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
