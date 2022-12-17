@@ -631,39 +631,49 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderNews", ()=>renderNews);
 var _confing = require("./confing");
 async function renderNews() {
+    //   getting elements from DOM
+    const newsListContainer = document.querySelector("#newsList");
+    const categoryListContainer = document.querySelector("#categoryList");
+    function renderCategoryList() {
+        (0, _confing.newsCategories).reverse().map((category)=>{
+            const markUp = `<li>${category}</li>`;
+            categoryListContainer.insertAdjacentHTML("afterbegin", markUp);
+        });
+    }
+    renderCategoryList();
     // getting data from API
     const response = await fetch((0, _confing.FETCH_URL));
     const data = await response.json();
     console.log(data);
-    //   getting elements from DOM
-    const newsListContainer = document.querySelector("#newsList");
-    function getNewsTitles() {
+    function getNewsTitles(data) {
         data.data.map((news)=>{
             const markUp = `<li><img src="${news.imageUrl}" alt="news-poster"><h3>${news.title}</h3><p><i>by: ${news.author}</i></p><p>${news.date}</p></li>`;
             newsListContainer.insertAdjacentHTML("afterbegin", markUp);
         });
     }
-    getNewsTitles();
+    getNewsTitles(data);
 }
 
 },{"./confing":"ex4bO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ex4bO":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FETCH_URL", ()=>FETCH_URL);
-const FETCH_URL = `https://inshorts.deta.dev/news?category=business`; // export const newsCategories = [
- //   all,
- //   business,
- //   sports,
- //   world,
- //   politics,
- //   technology,
- //   startup,
- //   entertainment,
- //   miscellaneous,
- //   hatke,
- //   science,
- //   automobile,
- // ];
+parcelHelpers.export(exports, "newsCategories", ()=>newsCategories);
+const FETCH_URL = `https://inshorts.deta.dev/news?category=business`;
+const newsCategories = [
+    "all",
+    "business",
+    "sports",
+    "world",
+    "politics",
+    "technology",
+    "startup",
+    "entertainment",
+    "miscellaneous",
+    "hatke",
+    "science",
+    "automobile"
+];
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire73e9")
 

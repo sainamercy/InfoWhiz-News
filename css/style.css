@@ -30,8 +30,12 @@ nav ul{
 }
 li{
   list-style: none;
+  padding: 15px;
+  border-radius: 5px;
 }
-
+nav li:not(:last-child):hover{
+  background-color: gray;
+}
 #heading {
   font-size: 2.5em;
   text-align: center;
@@ -129,6 +133,30 @@ form button {
 #content{
   height: 100%;
   width: 100%;
+}
+#newsCategory{
+  position: relative;
+  cursor: pointer;
+}
+#categoryList{
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 15px;
+  background-color: rgb(16, 16, 16);
+  display: none;
+  font-size: 1em;
+  text-align: center;
+}
+#categoryList li{
+  padding: 15px;
+  width: 250px;
+  border-bottom: 1px solid grey;
+}
+#newsCategory:hover  #categoryList{
+    display: block;
+}
+#categoryList li:hover{
+  background-color: gray;
 }
 #newsBriefs{
   height: 90%;
