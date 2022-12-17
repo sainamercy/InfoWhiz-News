@@ -10,9 +10,9 @@ export function authentication() {
   const loginPassword = document.querySelector("#loginPass");
   const mainPage = document.querySelector("#main");
   const navList = document.querySelector("#navList")
+  const contactSection = document.querySelector("#contact")
   // hide login form and main section
-  loginForm.style.display = "none";
-  mainPage.style.display = "none";
+  loginForm.style.display = mainPage.style.display = contactSection.style.display = "none"
 
   // initializing signup details to be derived from user input
   let signDetails;
@@ -47,7 +47,7 @@ export function authentication() {
     //   using information from signup to login user
     if (email === signDetails.email && password === signDetails.password) {
       authSection.style.display = "none";
-      mainPage.style.display = "flex";
+      mainPage.style.display = contactSection.style.display = "flex";
       navList.insertAdjacentHTML("beforeend", `<li class="user"><i class="fa-solid fa-user"></i> ${signDetails.userName}</li>`)
     } else {
       alert("please enter correct credentials");
