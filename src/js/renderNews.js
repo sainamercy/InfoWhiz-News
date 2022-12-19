@@ -32,6 +32,7 @@ export async function renderNews() {
       list.addEventListener("click", async (e) => {
         renderSpinner(newsListContainer)
         renderSpinner(newsDetailsContainer)
+        briefsSpan.textContent = `${category.toUpperCase()}:`;
         newsCategory = e.target.textContent;
         const response = await fetch(FETCH_URL + newsCategory);
         const data = await response.json();
@@ -48,7 +49,7 @@ export async function renderNews() {
     const briefsSpan = document.querySelector("#briefsSpan");
     data.data.map((news) => {
       const markUp = `<li><img src="${news.imageUrl}" alt="news-poster"><h3>${news.title}</h3><p><i>by: ${news.author}</i></p><p>${news.date}</p></li>`;
-      briefsSpan.textContent = `${category.toUpperCase()}:`;
+     
       newsListContainer.insertAdjacentHTML("afterbegin", markUp);
 
       // render news Details on click of news list container
