@@ -24,15 +24,18 @@ export function authentication() {
       userName: signUpUserName.value,
       password: signUpPassword.value,
     };
+    if(signUpEmail.value==="" && signUpUserName.value==="" && signUpPassword.value===""){
+      alert("please fill in all fields!")
+    }else{
     signUpForm.style.display = "none";
     loginForm.style.display = "flex";
     console.log(signDetails);
+    }
     return signDetails;
   }
   // executing signup on submit of the form
   signUpForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
     signup();
   });
 
