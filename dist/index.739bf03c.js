@@ -643,12 +643,13 @@ async function renderNews() {
     function clear(parentElement) {
         parentElement.innerHTML = "";
     }
-    // display category list
+    // setting all category as default display
     let newsCategory = "all";
     const allResponse = await fetch((0, _confing.FETCH_URL) + newsCategory);
     const allData = await allResponse.json();
     getNewsTitles(allData, newsCategory);
     displayNewsDetails(allData.data.reverse()[0]);
+    // display category list
     function renderCategoryList() {
         (0, _confing.newsCategories).reverse().map((category)=>{
             const markUp = `<li>${category}</li>`;

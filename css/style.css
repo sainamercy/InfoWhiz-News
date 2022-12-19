@@ -132,6 +132,7 @@ form button {
 }
 .fa-spinner{
   font-size: 3.5em; 
+  margin-top: 100px;
 }
 #content{
   height: 100%;
@@ -178,10 +179,10 @@ form button {
   padding: 20px;
   margin-top: 5px;
   border-radius: 10px;
-  color: rgb(200, 196, 196);
+  color: black;
 }
 .briefsHead span{
-color: black;
+color:rgb(200, 196, 196);
 }
 #newsList{
   display: flex;
@@ -222,23 +223,32 @@ color: black;
 }
 #details{
   height: 100%;
-  width: 80%;
+  width: 100%;
   border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #details h3{
-  border-bottom: 1px solid grey;
-  padding: 30px;
+  border-bottom: 1px solid rgb(203, 201, 201);
   font-size: 2em;
-}
-#details .content{
-  font-size: 1.5em;
+  padding: 20px;
 }
 #details img{
   height: 50%;
   width: 60%;
 }
 #details p{
-  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1.3em;
+}
+#details p{
+  color: grey;
+  line-height: 30px;
+}
+#details .content{
+  color: black;
 }
 /* contact section */
 #contact{
