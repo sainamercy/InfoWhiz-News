@@ -109,7 +109,7 @@ form label {
 form p {
   margin-bottom: 5px;
 }
-form button {
+button {
   width: 50%;
   color: rgb(47, 46, 46);
   font-size: 1.2em;
@@ -222,12 +222,13 @@ color:rgb(200, 196, 196);
   width: 70%;
 }
 #details{
-  height: 100%;
+  height: 90%;
   width: 100%;
   border: 1px solid grey;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
 }
 #details h3{
   border-bottom: 1px solid rgb(203, 201, 201);
@@ -237,6 +238,7 @@ color:rgb(200, 196, 196);
 #details img{
   height: 50%;
   width: 60%;
+  margin-bottom: 10px;
 }
 #details p{
   margin-bottom: 10px;
@@ -245,10 +247,13 @@ color:rgb(200, 196, 196);
 }
 #details p{
   color: grey;
-  line-height: 30px;
+  line-height: 35px;
 }
 #details .content{
   color: black;
+}
+#details button{
+  width: 200px;
 }
 /* contact section */
 #contact{

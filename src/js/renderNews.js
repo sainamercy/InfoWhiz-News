@@ -63,12 +63,14 @@ export async function renderNews() {
   // display news details
   function displayNewsDetails(data){
     renderSpinner(newsDetailsContainer)
+    console.log(data.readMoreUrl);
+    const readMoreUrl = data.readMoreUrl 
     const markUp = ` <h3>${data.title}</h3>
     <p>Author: <i>${data.author}</i></p>
     <p>${data.date}</p>
     <img src="${data.imageUrl}" alt="news-poster">
-    <p class="content">${data.content}</p>
-    <button>Read more...</button>
+    <p class="content">${data.content} <a href="${readMoreUrl}" target="_blank">Read more...</a></p>
+    
     `
     clear(newsDetailsContainer)
     newsDetailsContainer.insertAdjacentHTML("afterbegin", markUp)
