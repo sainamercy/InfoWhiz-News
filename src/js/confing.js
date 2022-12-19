@@ -1,4 +1,4 @@
-export const FETCH_URL = `https://inshorts.deta.dev/news?category=business`;
+export const FETCH_URL = `https://inshorts.deta.dev/news?category=`;
 export const newsCategories = [
   "all",
   "business",

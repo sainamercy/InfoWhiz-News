@@ -634,24 +634,35 @@ async function renderNews() {
     //   getting elements from DOM
     const newsListContainer = document.querySelector("#newsList");
     const categoryListContainer = document.querySelector("#categoryList");
+    // display category list
+    let newsCategory = "all";
+    const allResponse = await fetch((0, _confing.FETCH_URL) + newsCategory);
+    const allData = await allResponse.json();
+    getNewsTitles(allData, newsCategory);
     function renderCategoryList() {
         (0, _confing.newsCategories).reverse().map((category)=>{
             const markUp = `<li>${category}</li>`;
             categoryListContainer.insertAdjacentHTML("afterbegin", markUp);
+            // getting news category, then fetch data according to category
+            const list = categoryListContainer.querySelector("li");
+            list.addEventListener("click", async (e)=>{
+                newsCategory = e.target.textContent;
+                const response = await fetch((0, _confing.FETCH_URL) + newsCategory);
+                const data = await response.json();
+                getNewsTitles(data, newsCategory);
+            });
         });
     }
     renderCategoryList();
-    // getting data from API
-    const response = await fetch((0, _confing.FETCH_URL));
-    const data = await response.json();
-    console.log(data);
-    function getNewsTitles(data) {
+    // rendering news headlines
+    function getNewsTitles(data, category) {
+        const briefsSpan = document.querySelector("#briefsSpan");
         data.data.map((news)=>{
             const markUp = `<li><img src="${news.imageUrl}" alt="news-poster"><h3>${news.title}</h3><p><i>by: ${news.author}</i></p><p>${news.date}</p></li>`;
+            briefsSpan.textContent = `${category}:`;
             newsListContainer.insertAdjacentHTML("afterbegin", markUp);
         });
     }
-    getNewsTitles(data);
 }
 
 },{"./confing":"ex4bO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ex4bO":[function(require,module,exports) {
@@ -659,7 +670,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "FETCH_URL", ()=>FETCH_URL);
 parcelHelpers.export(exports, "newsCategories", ()=>newsCategories);
-const FETCH_URL = `https://inshorts.deta.dev/news?category=business`;
+const FETCH_URL = `https://inshorts.deta.dev/news?category=`;
 const newsCategories = [
     "all",
     "business",
