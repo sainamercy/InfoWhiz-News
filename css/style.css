@@ -136,6 +136,7 @@ form button {
 #content{
   height: 100%;
   width: 100%;
+  display: flex;
 }
 #newsCategory{
   position: relative;
@@ -195,6 +196,7 @@ color: black;
   border-radius: 10px;
   margin-bottom: 5px;
   box-shadow: 5px 5px 10px 3px rgb(164, 163, 163);
+  cursor: pointer;
 }
 #newsList li:hover, #newsList li:focus {
   transform: scale(1.01);
@@ -213,7 +215,31 @@ color: black;
   margin-bottom: 15px;
   font-size: 1.5em;
 }
-
+#newsDetails{
+  display: flex;
+  height: 100%;
+  width: 70%;
+}
+#details{
+  height: 100%;
+  width: 80%;
+  border: 1px solid grey;
+}
+#details h3{
+  border-bottom: 1px solid grey;
+  padding: 30px;
+  font-size: 2em;
+}
+#details .content{
+  font-size: 1.5em;
+}
+#details img{
+  height: 50%;
+  width: 60%;
+}
+#details p{
+  margin-top: 10px;
+}
 /* contact section */
 #contact{
   height: 100vh;
