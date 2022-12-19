@@ -10,7 +10,7 @@
 nav {
   background-color: black;
   color: white;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -36,6 +36,22 @@ nav li{
 nav li:not(:last-child):hover{
   background-color: gray;
 }
+nav form{
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  
+}
+nav form input{
+  border: none;
+  padding: 18px;
+
+}
+nav form button{
+  width: 70px;
+  font-size: 1em;
+}
+
 #heading {
   font-size: 2.5em;
   text-align: center;
@@ -128,7 +144,7 @@ button {
   flex-direction: column;
 }
 .user{
-  color: red;
+  color: grey;
 }
 .fa-spinner{
   font-size: 3.5em; 
