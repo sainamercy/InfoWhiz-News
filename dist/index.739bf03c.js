@@ -534,8 +534,10 @@ function hmrAcceptRun(bundle, id) {
 },{}],"ebWYT":[function(require,module,exports) {
 var _auth = require("./auth");
 var _renderNews = require("./renderNews");
-(0, _auth.authentication)();
-(0, _renderNews.renderNews)();
+document.addEventListener("DOMContentLoaded", ()=>{
+    (0, _auth.authentication)();
+    (0, _renderNews.renderNews)();
+});
 
 },{"./auth":"gjHiY","./renderNews":"c0dpJ"}],"gjHiY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

@@ -192,16 +192,12 @@ button {
 .briefsHead {
   width: 100%;
   text-align: center;
-  color: #000;
+  color: #c8c4c4;
   background-color: #353434;
   border-radius: 10px;
   margin-top: 5px;
   padding: 20px;
   font-size: 1.6em;
-}
-
-.briefsHead span {
-  color: #c8c4c4;
 }
 
 #newsList {

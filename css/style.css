@@ -179,10 +179,7 @@ button {
   padding: 20px;
   margin-top: 5px;
   border-radius: 10px;
-  color: black;
-}
-.briefsHead span{
-color:rgb(200, 196, 196);
+  color: rgb(200, 196, 196);
 }
 #newsList{
   display: flex;
