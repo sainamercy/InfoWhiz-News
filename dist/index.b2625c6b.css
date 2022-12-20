@@ -48,13 +48,12 @@ nav form {
 nav form input {
   background-color: #cecfcf;
   border: none;
-  padding: 18px;
 }
 
 nav form button {
   width: 70px;
   color: #cecfcf;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 #heading {

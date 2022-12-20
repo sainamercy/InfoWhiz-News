@@ -657,6 +657,7 @@ async function renderNews() {
     searchForm.addEventListener("submit", (e)=>{
         e.preventDefault();
         searchNews();
+        searchForm.reset();
     });
     // display category list
     function renderCategoryList() {
