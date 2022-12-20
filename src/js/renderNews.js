@@ -6,6 +6,8 @@ export async function renderNews() {
   const categoryListContainer = document.querySelector("#categoryList");
   const newsDetailsContainer = document.querySelector("#details");
   const searchForm = document.querySelector("#search");
+  const bookmarksListContainer = document.querySelector("#bookmarksList");
+  const bookmarkDefaultList = document.querySelector("#defaultList");
 
   // loading spinner
   function renderSpinner(parentElement) {
@@ -24,6 +26,7 @@ export async function renderNews() {
   displayNewsDetails(allData.data.reverse()[0]);
   // init data to use in search functionality
   let searchNewsList = getNewsArray(allData.data);
+  let bookmarksList = [];
 
   // display category list
   function renderCategoryList() {
@@ -73,6 +76,7 @@ export async function renderNews() {
     renderSpinner(newsDetailsContainer);
     const readMoreUrl = data.readMoreUrl;
     const markUp = ` <h3>${data.title}</h3>
+    <p id="addToBm"><i class="fa-solid fa-plus"></i> to bookmarks</p>
     <p>Author: <i>${data.author}</i></p>
     <p>${data.date}</p>
     <img src="${data.imageUrl}" alt="news-poster">
@@ -80,6 +84,19 @@ export async function renderNews() {
     `;
     clear(newsDetailsContainer);
     newsDetailsContainer.insertAdjacentHTML("afterbegin", markUp);
+
+    // executing add bookmarks function
+    const addtoBm = newsDetailsContainer.querySelector("#addToBm");
+    addtoBm.addEventListener("click", () => {
+      if (bookmarksList.includes(data.title)) {
+        alert("bookmark exists");
+      } else {
+        bookmarksList.push(data.title);
+        console.log(bookmarksList);
+        clear(bookmarksListContainer);
+        bookmark(bookmarksList);
+      }
+    });
   }
 
   // search news......
@@ -119,4 +136,15 @@ export async function renderNews() {
     searchNews();
     searchForm.reset();
   });
+
+  // bookmark favorite news
+  function bookmark(bookmarksList) {
+    bookmarksList.map((title) => {
+      const markUp = `<li>${title}</li>`;
+      bookmarkDefaultList.style.display = "none";
+
+      bookmarksListContainer.insertAdjacentHTML("afterbegin", markUp);
+    });
+    alert("succesfully added!");
+  }
 }

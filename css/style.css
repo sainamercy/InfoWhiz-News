@@ -156,11 +156,11 @@ button {
   width: 100%;
   display: flex;
 }
-#newsCategory {
+#newsCategory, #bookmarks{
   position: relative;
   cursor: pointer;
 }
-#categoryList {
+#categoryList, #bookmarksList{
   position: absolute;
   margin-left: 15px;
   margin-top: 15px;
@@ -169,12 +169,12 @@ button {
   font-size: 1em;
   text-align: center;
 }
-#categoryList li {
+#categoryList li, #bookmarksList li{
   padding: 15px;
   width: 250px;
   border-bottom: 1px solid grey;
 }
-#newsCategory:hover #categoryList {
+#newsCategory:hover #categoryList, #bookmarks:hover #bookmarksList{
   display: block;
 }
 #categoryList li:hover {
@@ -260,16 +260,23 @@ h3 {
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1.3em;
-}
-#details p {
   color: grey;
   line-height: 35px;
 }
+
 #details .content {
   color: black;
 }
 #details button {
   width: 200px;
+}
+#details #addToBm{
+  position: absolute;
+  top: 200px;
+  right: 60px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }
 /* contact section */
 #contact {

@@ -584,7 +584,6 @@ function authentication() {
     // login function
     function login(e) {
         e.preventDefault();
-        console.log(signDetails);
         const email = loginEmail.value;
         const password = loginPassword.value;
         //   using information from signup to login user
@@ -642,6 +641,8 @@ async function renderNews() {
     const categoryListContainer = document.querySelector("#categoryList");
     const newsDetailsContainer = document.querySelector("#details");
     const searchForm = document.querySelector("#search");
+    const bookmarksListContainer = document.querySelector("#bookmarksList");
+    const bookmarkDefaultList = document.querySelector("#defaultList");
     // loading spinner
     function renderSpinner(parentElement) {
         parentElement.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i>`;
@@ -658,6 +659,7 @@ async function renderNews() {
     displayNewsDetails(allData.data.reverse()[0]);
     // init data to use in search functionality
     let searchNewsList = getNewsArray(allData.data);
+    let bookmarksList = [];
     // display category list
     function renderCategoryList() {
         (0, _confing.newsCategories).reverse().map((category)=>{
@@ -701,6 +703,7 @@ async function renderNews() {
         renderSpinner(newsDetailsContainer);
         const readMoreUrl = data.readMoreUrl;
         const markUp = ` <h3>${data.title}</h3>
+    <p id="addToBm"><i class="fa-solid fa-plus"></i> to bookmarks</p>
     <p>Author: <i>${data.author}</i></p>
     <p>${data.date}</p>
     <img src="${data.imageUrl}" alt="news-poster">
@@ -708,6 +711,17 @@ async function renderNews() {
     `;
         clear(newsDetailsContainer);
         newsDetailsContainer.insertAdjacentHTML("afterbegin", markUp);
+        // executing add bookmarks function
+        const addtoBm = newsDetailsContainer.querySelector("#addToBm");
+        addtoBm.addEventListener("click", ()=>{
+            if (bookmarksList.includes(data.title)) alert("bookmark exists");
+            else {
+                bookmarksList.push(data.title);
+                console.log(bookmarksList);
+                clear(bookmarksListContainer);
+                bookmark(bookmarksList);
+            }
+        });
     }
     // search news......
     // getting array of news objects
@@ -740,6 +754,15 @@ async function renderNews() {
         searchNews();
         searchForm.reset();
     });
+    // bookmark favorite news
+    function bookmark(bookmarksList) {
+        bookmarksList.map((title)=>{
+            const markUp = `<li>${title}</li>`;
+            bookmarkDefaultList.style.display = "none";
+            bookmarksListContainer.insertAdjacentHTML("afterbegin", markUp);
+        });
+        alert("succesfully added!");
+    }
 }
 
 },{"./confing":"ex4bO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ex4bO":[function(require,module,exports) {

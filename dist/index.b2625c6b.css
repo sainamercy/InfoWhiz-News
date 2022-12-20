@@ -169,12 +169,12 @@ button {
   display: flex;
 }
 
-#newsCategory {
+#newsCategory, #bookmarks {
   cursor: pointer;
   position: relative;
 }
 
-#categoryList {
+#categoryList, #bookmarksList {
   text-align: center;
   background-color: #101010;
   margin-top: 15px;
@@ -184,13 +184,13 @@ button {
   position: absolute;
 }
 
-#categoryList li {
+#categoryList li, #bookmarksList li {
   width: 250px;
   border-bottom: 1px solid gray;
   padding: 15px;
 }
 
-#newsCategory:hover #categoryList {
+#newsCategory:hover #categoryList, #bookmarks:hover #bookmarksList {
   display: block;
 }
 
@@ -298,6 +298,15 @@ button {
 
 #details button {
   width: 200px;
+}
+
+#details #addToBm {
+  color: #00f;
+  cursor: pointer;
+  text-decoration: underline;
+  position: absolute;
+  top: 200px;
+  right: 60px;
 }
 
 #contact {
