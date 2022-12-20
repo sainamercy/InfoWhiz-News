@@ -2,9 +2,10 @@
   "name": "infowhiz-news",
   "version": "1.0.0",
   "description": "News updates application",
-  "main": "./src/js/index.js",
+  "default": "./src/js/index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
