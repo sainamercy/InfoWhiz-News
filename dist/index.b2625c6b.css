@@ -7,7 +7,7 @@
 }
 
 nav {
-  color: #fff;
+  color: #cecfcf;
   width: 100%;
   background-color: #000;
   justify-content: space-between;
@@ -17,12 +17,12 @@ nav {
 }
 
 nav a {
-  color: azure;
+  color: #cecfcf;
   text-decoration: none;
 }
 
 nav ul {
-  color: azure;
+  color: #cecfcf;
   align-items: center;
   gap: 20px;
   font-size: 1.4em;
@@ -46,12 +46,14 @@ nav form {
 }
 
 nav form input {
+  background-color: #cecfcf;
   border: none;
   padding: 18px;
 }
 
 nav form button {
   width: 70px;
+  color: #cecfcf;
   font-size: 1em;
 }
 
