@@ -309,6 +309,9 @@ h3 {
   border-bottom: 1px solid grey;
   border-radius: 0px;
 }
+#contact form textarea{
+  color: rgb(192, 187, 187);
+}
 #contact form label,
 #contact form button {
   color: rgb(192, 187, 187);

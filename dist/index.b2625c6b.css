@@ -340,7 +340,7 @@ button {
   border-radius: 0;
 }
 
-#contact form label, #contact form button {
+#contact form textarea, #contact form label, #contact form button {
   color: #c0bbbb;
 }
 

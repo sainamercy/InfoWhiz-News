@@ -534,12 +534,14 @@ function hmrAcceptRun(bundle, id) {
 },{}],"ebWYT":[function(require,module,exports) {
 var _auth = require("./auth");
 var _renderNews = require("./renderNews");
+var _feedback = require("./feedback");
 document.addEventListener("DOMContentLoaded", ()=>{
     (0, _auth.authentication)();
     (0, _renderNews.renderNews)();
+    (0, _feedback.feedback)();
 });
 
-},{"./auth":"gjHiY","./renderNews":"c0dpJ"}],"gjHiY":[function(require,module,exports) {
+},{"./auth":"gjHiY","./renderNews":"c0dpJ","./feedback":"awSbP"}],"gjHiY":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "authentication", ()=>authentication);
@@ -746,6 +748,32 @@ const newsCategories = [
     "science",
     "automobile"
 ];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"awSbP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "feedback", ()=>feedback);
+function feedback() {
+    // getting elements from the DOM
+    const feedbackForm = document.querySelector("#feedback");
+    const feedbackEmail = document.querySelector("#fbEmail");
+    const feedbackNames = document.querySelector("#name");
+    const feedbackMessage = document.querySelector("#fbMessage");
+    // getting feedback from user input
+    function getFeedback() {
+        const email = feedbackEmail.value;
+        const name = feedbackNames.value;
+        const message = feedbackMessage.value;
+        if (feedbackEmail.value === "" || feedbackNames.value === "" || feedbackMessage.value === "") alert("please fill all fields!");
+        else alert("Thank you for your feedback \uD83E\uDD17");
+    }
+    // executing feedback on submit of the form
+    feedbackForm.addEventListener("submit", (e)=>{
+        e.preventDefault();
+        getFeedback();
+        feedbackForm.reset();
+    });
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire73e9")
 
