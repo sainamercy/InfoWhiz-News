@@ -185,11 +185,6 @@ button {
   position: absolute;
 }
 
-#bookmarksList {
-  height: 90vh;
-  overflow-y: scroll;
-}
-
 #categoryList li, #bookmarksList li {
   width: 250px;
   border-bottom: 1px solid gray;

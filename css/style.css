@@ -172,10 +172,6 @@ button {
   text-align: center;
   z-index: 1;
 }
-#bookmarksList {
-  height: 90vh;
-  overflow-y: scroll;
-}
 #categoryList li,
 #bookmarksList li {
   padding: 15px;
