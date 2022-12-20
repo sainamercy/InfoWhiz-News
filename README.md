@@ -25,7 +25,7 @@ InfoWhiz News is a news application that allows users to access diverse categori
 #### Sign-up
 - On load of the page `sign-up form` will be displayed.
 - Fill in the provided fields. `note:` you can input fake data.
-- Make sure you memorize the provided data, since you will use it in `log-in` section.
+- Make sure to memorize the provided data, since you will use it in `log-in` section.
 - Click `sign-up button` to complete sign-up`.
 - `log-in form` will be displayed.
 
