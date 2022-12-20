@@ -16,17 +16,14 @@ export async function renderNews() {
     parentElement.innerHTML = "";
   }
 
-  // setting all category as default display
+  // setting "all" category as default display
   let newsCategory = "all";
   const allResponse = await fetch(FETCH_URL + newsCategory);
   const allData = await allResponse.json();
-  getNewsTitles(allData);
+  getNewsTitles(allData.data);
   displayNewsDetails(allData.data.reverse()[0]);
-  searchForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    searchNews();
-    searchForm.reset()
-  });
+  // init data to use in search functionality
+  let searchNewsList = getNewsArray(allData.data);
 
   // display category list
   function renderCategoryList() {
@@ -47,8 +44,10 @@ export async function renderNews() {
         const response = await fetch(FETCH_URL + newsCategory);
         const data = await response.json();
         clear(newsListContainer);
-        getNewsTitles(data, newsCategory);
+        getNewsTitles(data.data, newsCategory);
         displayNewsDetails(data.data.reverse()[0]);
+        // getting data to use in search functionality
+        searchNewsList = getNewsArray(data.data);
       });
     });
   }
@@ -56,7 +55,7 @@ export async function renderNews() {
 
   // rendering news headlines
   function getNewsTitles(data) {
-    data.data.map((news) => {
+    data.map((news) => {
       const markUp = `<li><img src="${news.imageUrl}" alt="news-poster"><h3>${news.title}</h3><p><i>by: ${news.author}</i></p><p>${news.date}</p></li>`;
 
       newsListContainer.insertAdjacentHTML("afterbegin", markUp);
@@ -83,22 +82,41 @@ export async function renderNews() {
     newsDetailsContainer.insertAdjacentHTML("afterbegin", markUp);
   }
 
-  function getTitlesArray(data) {
-    const newsTitles = [];
+  // search news......
+  // getting array of news objects
+  function getNewsArray(data) {
+    const newsList = [];
     data.map((news) => {
-      newsTitles.push(news.title);
+      newsList.push(news);
     });
-    return newsTitles;
+    return newsList;
   }
-  const newsTitles = getTitlesArray(allData.data);
 
-  // search news
+  // search news function
   function searchNews() {
     const searchValue = document.querySelector("#searchValue").value;
 
-    const results = newsTitles.filter((news) => {
-      return news.toLowerCase().includes(searchValue.toLowerCase());
+    const results = searchNewsList.filter((news) => {
+      return news.title.toLowerCase().includes(searchValue.toLowerCase());
     });
-    console.log(results);
+    if (results.length === 0) {
+      alert(
+        "No news found! please use category section to find variety of news"
+      );
+    } else {
+      renderSpinner(newsListContainer);
+      renderSpinner(newsDetailsContainer);
+      clear(newsListContainer);
+      getNewsTitles(results);
+      clear(newsDetailsContainer);
+      displayNewsDetails(results.reverse()[0]);
+    }
   }
+
+  // executing search funtion
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    searchNews();
+    searchForm.reset();
+  });
 }
