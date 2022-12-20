@@ -77,6 +77,7 @@ export async function renderNews() {
     const readMoreUrl = data.readMoreUrl;
     const markUp = ` <h3>${data.title}</h3>
     <p id="addToBm"><i class="fa-solid fa-plus"></i> to bookmarks</p>
+    <p id="successMsg">Succsefully added</p>
     <p>Author: <i>${data.author}</i></p>
     <p>${data.date}</p>
     <img src="${data.imageUrl}" alt="news-poster">
@@ -88,18 +89,22 @@ export async function renderNews() {
     // executing add bookmarks function
     const addtoBm = newsDetailsContainer.querySelector("#addToBm");
     addtoBm.addEventListener("click", () => {
-      const titles = []
-      bookmarksList.map(news=>{
-        titles.push(news.title)
-      })
+      const titles = [];
+      bookmarksList.map((news) => {
+        titles.push(news.title);
+      });
       console.log(titles);
       if (titles.includes(data.title)) {
         alert("bookmark exists");
       } else {
         bookmarksList.push(data);
+        setLocalStorage();
         console.log(bookmarksList);
         clear(bookmarksListContainer);
         bookmark(bookmarksList);
+        const bookmarkSuccessMsg =
+          newsDetailsContainer.querySelector("#successMsg");
+        bookmarkSuccessMsg.style.display = "block";
       }
     });
   }
@@ -150,6 +155,20 @@ export async function renderNews() {
 
       bookmarksListContainer.insertAdjacentHTML("afterbegin", markUp);
     });
-    alert("succesfully added!");
   }
+
+  // save bookmarks to browser localstorage
+  function setLocalStorage() {
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarksList));
+  }
+
+  // get data from browser localstorage
+  function getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem("bookmarks"));
+    console.log(data);
+    if (!data) return;
+    bookmarksList = data;
+    bookmark(bookmarksList);
+  }
+  getLocalStorage();
 }

@@ -185,6 +185,11 @@ button {
   position: absolute;
 }
 
+#bookmarksList {
+  height: 90vh;
+  overflow-y: scroll;
+}
+
 #categoryList li, #bookmarksList li {
   width: 250px;
   border-bottom: 1px solid gray;
@@ -306,7 +311,15 @@ button {
   cursor: pointer;
   text-decoration: underline;
   position: absolute;
-  top: 200px;
+  top: 220px;
+  right: 60px;
+}
+
+#details #successMsg {
+  color: green;
+  display: none;
+  position: absolute;
+  top: 250px;
   right: 60px;
 }
 

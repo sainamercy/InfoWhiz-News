@@ -156,11 +156,13 @@ button {
   width: 100%;
   display: flex;
 }
-#newsCategory, #bookmarks{
+#newsCategory,
+#bookmarks {
   position: relative;
   cursor: pointer;
 }
-#categoryList, #bookmarksList{
+#categoryList,
+#bookmarksList {
   position: absolute;
   margin-left: 15px;
   margin-top: 15px;
@@ -170,12 +172,18 @@ button {
   text-align: center;
   z-index: 1;
 }
-#categoryList li, #bookmarksList li{
+#bookmarksList {
+  height: 90vh;
+  overflow-y: scroll;
+}
+#categoryList li,
+#bookmarksList li {
   padding: 15px;
   width: 250px;
   border-bottom: 1px solid grey;
 }
-#newsCategory:hover #categoryList, #bookmarks:hover #bookmarksList{
+#newsCategory:hover #categoryList,
+#bookmarks:hover #bookmarksList {
   display: block;
 }
 #categoryList li:hover {
@@ -271,13 +279,20 @@ h3 {
 #details button {
   width: 200px;
 }
-#details #addToBm{
+#details #addToBm {
   position: absolute;
-  top: 200px;
+  top: 220px;
   right: 60px;
   color: blue;
   text-decoration: underline;
   cursor: pointer;
+}
+#details #successMsg {
+  position: absolute;
+  display: none;
+  top: 250px;
+  right: 60px;
+  color: green;
 }
 /* contact section */
 #contact {
@@ -318,7 +333,7 @@ h3 {
   border-bottom: 1px solid grey;
   border-radius: 0px;
 }
-#contact form textarea{
+#contact form textarea {
   color: rgb(192, 187, 187);
 }
 #contact form label,
