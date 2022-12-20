@@ -9,10 +9,13 @@ export function authentication() {
   const loginEmail = document.querySelector("#loginEmail");
   const loginPassword = document.querySelector("#loginPass");
   const mainPage = document.querySelector("#main");
-  const navList = document.querySelector("#navList")
-  const contactSection = document.querySelector("#contact")
+  const navList = document.querySelector("#navList");
+  const contactSection = document.querySelector("#contact");
   // hide login form and main section
-  loginForm.style.display = mainPage.style.display = contactSection.style.display = "none"
+  loginForm.style.display =
+    mainPage.style.display =
+    contactSection.style.display =
+      "none";
 
   // initializing signup details to be derived from user input
   let signDetails;
@@ -24,11 +27,15 @@ export function authentication() {
       userName: signUpUserName.value,
       password: signUpPassword.value,
     };
-    if(signUpEmail.value==="" || signUpUserName.value==="" || signUpPassword.value===""){
-      alert("please fill in all fields!")
-    }else{
-    signUpForm.style.display = "none";
-    loginForm.style.display = "flex";
+    if (
+      signUpEmail.value === "" ||
+      signUpUserName.value === "" ||
+      signUpPassword.value === ""
+    ) {
+      alert("please fill in all fields!");
+    } else {
+      signUpForm.style.display = "none";
+      loginForm.style.display = "flex";
     }
     return signDetails;
   }
@@ -42,7 +49,6 @@ export function authentication() {
   function login(e) {
     e.preventDefault();
 
-    console.log(signDetails);
     const email = loginEmail.value;
     const password = loginPassword.value;
 
@@ -50,7 +56,10 @@ export function authentication() {
     if (email === signDetails.email && password === signDetails.password) {
       authSection.style.display = "none";
       mainPage.style.display = contactSection.style.display = "flex";
-      navList.insertAdjacentHTML("beforeend", `<li class="user"><i class="fa-solid fa-user"></i> ${signDetails.userName}</li>`)
+      navList.insertAdjacentHTML(
+        "beforeend",
+        `<li class="user"><i class="fa-solid fa-user"></i> ${signDetails.userName}</li>`
+      );
     } else {
       alert("please enter correct credentials");
       loginForm.reset();
@@ -60,4 +69,3 @@ export function authentication() {
   // executing login function on submit of the form
   loginForm.addEventListener("submit", login);
 }
-
