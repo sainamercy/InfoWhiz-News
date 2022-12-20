@@ -37,7 +37,6 @@ InfoWhiz News is a news application that allows users to access diverse categori
 
 - `Note:` sign-up and log-in data is not persistent. Hence, on page reload, authentication process is repeated.
 
-
 ### Main Section
 
 #### News list and News Content
