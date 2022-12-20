@@ -719,16 +719,17 @@ async function renderNews() {
             bookmarksList.map((news)=>{
                 titles.push(news.title);
             });
-            console.log(titles);
             if (titles.includes(data.title)) alert("bookmark exists");
             else {
                 bookmarksList.push(data);
                 setLocalStorage();
-                console.log(bookmarksList);
                 clear(bookmarksListContainer);
                 bookmark(bookmarksList);
                 const bookmarkSuccessMsg = newsDetailsContainer.querySelector("#successMsg");
                 bookmarkSuccessMsg.style.display = "block";
+                setTimeout(()=>{
+                    bookmarkSuccessMsg.style.display = "none";
+                }, 2000);
             }
         });
     }
@@ -766,7 +767,7 @@ async function renderNews() {
     // bookmark favorite news
     function bookmark(data) {
         data.map((news)=>{
-            const markUp = `<li><a href="${news.readMoreUrl}" target="_blank">${news.title}</a></li>`;
+            const markUp = `<li></i><a href="${news.readMoreUrl}" target="_blank">${news.title}</a></li>`;
             bookmarkDefaultList.style.display = "none";
             bookmarksListContainer.insertAdjacentHTML("afterbegin", markUp);
         });
@@ -778,7 +779,6 @@ async function renderNews() {
     // get data from browser localstorage
     function getLocalStorage() {
         const data = JSON.parse(localStorage.getItem("bookmarks"));
-        console.log(data);
         if (!data) return;
         bookmarksList = data;
         bookmark(bookmarksList);
