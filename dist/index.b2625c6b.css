@@ -303,34 +303,73 @@ button {
   height: 100vh;
   width: 100%;
   background-color: #262424;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 10px;
   display: flex;
   position: relative;
 }
 
+.contactCard {
+  height: 70%;
+  width: 70%;
+  color: #c0bbbb;
+  background-color: #00000097;
+  border-radius: 20px;
+  align-items: center;
+  gap: 100px;
+  font-size: 1.1em;
+  display: flex;
+  box-shadow: 5px 5px 10px 2px #262626;
+}
+
 #contact form {
-  height: 60%;
+  height: 80%;
+  width: 50%;
+  box-shadow: none;
+  color: #c0bbbb;
+  background-color: #0000;
+  margin-left: 20px;
+}
+
+#contact form input, #contact form textarea {
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid gray;
+  border-radius: 0;
+}
+
+#contact form label, #contact form button {
+  color: #c0bbbb;
 }
 
 #contactInfo {
-  height: 60%;
-  color: #2f2e2e;
+  height: 70%;
+  width: 50%;
   text-align: center;
+  background-color: #8080802b;
+  border-radius: 20px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  margin-right: 50px;
+  font-size: 1.1em;
+  display: flex;
+  box-shadow: 5px 5px 10px 2px #090909;
 }
 
-#contactInfo h3 {
-  color: #000;
-  font-size: 1.5em;
+#contactInfo .customIcon {
+  margin-right: 15px;
+  font-size: 2em;
 }
 
-.line {
-  height: 40%;
-  border: 1px solid #626060;
-  box-shadow: 1px 1px 30px 2px #1e0a0a;
+.fa-whatsapp {
+  margin-left: 15px;
+}
+
+.fa-copyright {
+  color: #c0bbbb;
 }
 
 .toTop {

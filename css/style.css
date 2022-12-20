@@ -3,55 +3,52 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 /* nav section */
 nav {
   background-color: black;
-  color: rgb(206, 207, 207);;
+  color: rgb(206, 207, 207);
   padding: 10px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
-nav a{
+nav a {
   text-decoration: none;
-  color:rgb(206, 207, 207);
+  color: rgb(206, 207, 207);
 }
-nav ul{
+nav ul {
   display: flex;
   align-items: center;
   font-size: 1.4em;
   gap: 20px;
   color: rgb(206, 207, 207);
 }
-nav li{
+nav li {
   list-style: none;
   padding: 15px;
   border-radius: 5px;
 }
-nav li:not(:last-child):hover{
+nav li:not(:last-child):hover {
   background-color: gray;
 }
-nav form{
+nav form {
   display: flex;
   flex-direction: row;
   width: 400px;
-  
 }
-nav form input{
+nav form input {
   border: none;
   /* padding: 18px; */
-  background-color: rgb(206, 207, 207);;
-
+  background-color: rgb(206, 207, 207);
 }
-nav form button{
+nav form button {
   width: 70px;
   font-size: 1.2em;
-  color: rgb(206, 207, 207);;
+  color: rgb(206, 207, 207);
 }
 
 #heading {
@@ -77,11 +74,11 @@ nav form button{
   background-attachment: fixed;
 }
 
-#authentication nav{
+#authentication nav {
   justify-content: space-evenly;
   padding: 30px;
 }
-.opacity{
+.opacity {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.888);
   height: 100%;
@@ -91,7 +88,7 @@ nav form button{
   align-items: center;
   text-align: center;
 }
-.form{
+.form {
   height: 100%;
   width: 100%;
   display: flex;
@@ -112,7 +109,8 @@ form {
   box-shadow: 5px 5px 20px 5px black;
   background-color: grey;
 }
-form input, textarea {
+form input,
+textarea {
   padding: 20px;
   border-radius: 5px;
   width: 100%;
@@ -145,23 +143,23 @@ button {
   display: flex;
   flex-direction: column;
 }
-.user{
+.user {
   color: grey;
 }
-.fa-spinner{
-  font-size: 3.5em; 
+.fa-spinner {
+  font-size: 3.5em;
   margin-top: 100px;
 }
-#content{
+#content {
   height: 100%;
   width: 100%;
   display: flex;
 }
-#newsCategory{
+#newsCategory {
   position: relative;
   cursor: pointer;
 }
-#categoryList{
+#categoryList {
   position: absolute;
   margin-left: 15px;
   margin-top: 15px;
@@ -170,18 +168,18 @@ button {
   font-size: 1em;
   text-align: center;
 }
-#categoryList li{
+#categoryList li {
   padding: 15px;
   width: 250px;
   border-bottom: 1px solid grey;
 }
-#newsCategory:hover  #categoryList{
-    display: block;
+#newsCategory:hover #categoryList {
+  display: block;
 }
-#categoryList li:hover{
+#categoryList li:hover {
   background-color: gray;
 }
-#newsBriefs{
+#newsBriefs {
   height: 90%;
   width: 30%;
   overflow-y: scroll;
@@ -189,7 +187,7 @@ button {
   flex-direction: column;
   align-items: center;
 }
-.briefsHead{
+.briefsHead {
   font-size: 1.6em;
   background-color: rgb(53, 52, 52);
   width: 100%;
@@ -199,13 +197,13 @@ button {
   border-radius: 10px;
   color: rgb(200, 196, 196);
 }
-#newsList{
+#newsList {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
 }
-#newsList li{
+#newsList li {
   height: 400px;
   width: 95%;
   border: 1px solid rgb(146, 145, 145);
@@ -214,29 +212,31 @@ button {
   box-shadow: 5px 5px 10px 3px rgb(164, 163, 163);
   cursor: pointer;
 }
-#newsList li:hover, #newsList li:focus {
+#newsList li:hover,
+#newsList li:focus {
   transform: scale(1.01);
 }
-#newsList li img{
+#newsList li img {
   height: 65%;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-#newsList p ,h3{
+#newsList p,
+h3 {
   margin-bottom: 10px;
   margin-left: 5px;
 }
-#newsList h3{
+#newsList h3 {
   margin-bottom: 15px;
   font-size: 1.5em;
 }
-#newsDetails{
+#newsDetails {
   display: flex;
   height: 100%;
   width: 70%;
 }
-#details{
+#details {
   height: 90%;
   width: 100%;
   border: 1px solid grey;
@@ -245,67 +245,99 @@ button {
   align-items: center;
   overflow: scroll;
 }
-#details h3{
+#details h3 {
   border-bottom: 1px solid rgb(203, 201, 201);
   font-size: 2em;
   padding: 20px;
 }
-#details img{
+#details img {
   height: 50%;
   width: 60%;
   margin-bottom: 10px;
 }
-#details p{
+#details p {
   margin-bottom: 10px;
   padding: 10px;
   font-size: 1.3em;
 }
-#details p{
+#details p {
   color: grey;
   line-height: 35px;
 }
-#details .content{
+#details .content {
   color: black;
 }
-#details button{
+#details button {
   width: 200px;
 }
 /* contact section */
-#contact{
+#contact {
   height: 100vh;
   background-color: rgb(38, 36, 36);
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-
+  margin-top: 10px;
 }
-
-#contact form{
-  height: 60%;
-
+.contactCard {
+  display: flex;
+  height: 70%;
+  width: 70%;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.593);
+  border-radius: 20px;
+  gap: 100px;
+  color: rgb(192, 187, 187);
+  font-size: 1.1em;
+  box-shadow: 5px 5px 10px 2px rgb(38, 38, 38);
 }
-
-#contactInfo{
-  height: 60%;
-  color: rgb(47, 46, 46);
+#contact form {
+  height: 80%;
+  width: 50%;
+  background-color: transparent;
+  box-shadow: none;
+  color: rgb(192, 187, 187);
+  margin-left: 20px;
+}
+#contact form input,
+#contact form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+  border-radius: 0px;
+}
+#contact form label,
+#contact form button {
+  color: rgb(192, 187, 187);
+}
+#contactInfo {
+  height: 70%;
+  width: 50%;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  background-color: rgba(128, 128, 128, 0.167);
+  margin-right: 50px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 2px rgb(9, 9, 9);
+  font-size: 1.1em;
 }
-#contactInfo h3{
-  color: black;
-  font-size: 1.5em;
+#contactInfo .customIcon {
+  font-size: 2em;
+  margin-right: 15px;
 }
-.line{
-  border: 1px solid rgb(98, 96, 96);
-  height: 40%;
-  box-shadow: 1px 1px 30px 2px rgb(30, 10, 10);
-
+.fa-whatsapp {
+  margin-left: 15px;
 }
-.toTop{
+.fa-copyright {
+  color: rgb(192, 187, 187);
+}
+.toTop {
   height: 80px;
   width: 80px;
   border: 1px solid white;
@@ -318,7 +350,7 @@ button {
   right: 20px;
   bottom: 20px;
 }
-.toTop a{
+.toTop a {
   display: flex;
   flex-direction: column;
   justify-content: center;
