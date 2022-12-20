@@ -88,10 +88,15 @@ export async function renderNews() {
     // executing add bookmarks function
     const addtoBm = newsDetailsContainer.querySelector("#addToBm");
     addtoBm.addEventListener("click", () => {
-      if (bookmarksList.includes(data.title)) {
+      const titles = []
+      bookmarksList.map(news=>{
+        titles.push(news.title)
+      })
+      console.log(titles);
+      if (titles.includes(data.title)) {
         alert("bookmark exists");
       } else {
-        bookmarksList.push(data.title);
+        bookmarksList.push(data);
         console.log(bookmarksList);
         clear(bookmarksListContainer);
         bookmark(bookmarksList);
@@ -138,9 +143,9 @@ export async function renderNews() {
   });
 
   // bookmark favorite news
-  function bookmark(bookmarksList) {
-    bookmarksList.map((title) => {
-      const markUp = `<li>${title}</li>`;
+  function bookmark(data) {
+    data.map((news) => {
+      const markUp = `<li><a href="${news.readMoreUrl}" target="_blank">${news.title}</a></li>`;
       bookmarkDefaultList.style.display = "none";
 
       bookmarksListContainer.insertAdjacentHTML("afterbegin", markUp);

@@ -36,7 +36,7 @@ nav li {
   list-style: none;
 }
 
-nav li:not(:last-child):hover {
+nav li:hover {
   background-color: gray;
 }
 
@@ -176,6 +176,7 @@ button {
 
 #categoryList, #bookmarksList {
   text-align: center;
+  z-index: 1;
   background-color: #101010;
   margin-top: 15px;
   margin-left: 15px;

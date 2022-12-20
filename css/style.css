@@ -33,7 +33,7 @@ nav li {
   padding: 15px;
   border-radius: 5px;
 }
-nav li:not(:last-child):hover {
+nav li:hover {
   background-color: gray;
 }
 nav form {
@@ -168,6 +168,7 @@ button {
   display: none;
   font-size: 1em;
   text-align: center;
+  z-index: 1;
 }
 #categoryList li, #bookmarksList li{
   padding: 15px;
