@@ -57,12 +57,6 @@ InfoWhiz News is a news application that allows users to access diverse categori
 - Then click on desired news to be redirected to the news source page.
 - `Note:` on page reload, the bookmarked data persists.
 
-#### Clear windows local storage
-- Open `developer console` on your browser by right clicking on the page then navigating to `inspect` option.
-- Navigate to `Application` option on developer console, then to `local storage` option. 
-- Click on the option that has been saved using this project's site url.
-- Click on `X` icon to delete data.
-
 ### Contact section
 - Click on `contact` option on the navigation bar to navigate to contact section
 - The section cotains dummy contact information and a feedback form
